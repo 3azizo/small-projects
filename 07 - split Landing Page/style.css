@@ -2,15 +2,105 @@
 
 * {
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 body {
   font-family: "Ubuntu", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  background-color: rgb(80, 185, 255);
   font-size: 28px;
   margin: 0;
+
   overflow-x: hidden;
+}
+.container{  
+  width: 100%;
+  height:100vh;
+  position: relative;
+  background: #333;
+}
+.split{
+position: absolute;
+width: 50%;
+height: 100%;
+overflow: hidden;
+}
+.split.left{
+  left: 0; 
+  background: url("./img/naruto.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.split.right{
+  right: 0;
+  background: url("./img/one_piece.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.right::after,.left::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.right::after{
+  background-color: #06a71c7a;
+}
+.left::after{
+  background-color: #0a5ead7a;
+}
+.right .btn:hover{
+  background-color: #06a71c;
+}
+.left .btn:hover{
+  background-color: #0a5ead;
+}
+.split h1{
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.split .btn{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 40%; 
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+  z-index: 1;
+}
+.hover-left .left{
+  width: 80%;
+}
+.hover-left .right{
+  width: 20%;
+}
+.hover-right .right{
+  width: 80%;
+}
+.hover-right .left{
+  width: 20%;
+}
+@media (max-width:800px) {
+  h1{
+    font-size: 2rem;
+    top: 30%;
+  }
+  .btn{
+    padding: 1.2rem;
+    width: 12rem;
+  }
 }
