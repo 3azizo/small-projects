@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #2780d3;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.container{
+    font-size: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    width: 500px;
+    text-align: center;
+}
+
+#enter-choices{
+resize: none;
+width: 100%;
+outline: none;
+font-size: inherit;
+margin-bottom: 10px;
+}
+.choices .tag{
+    display: inline-block;
+    background-color: #2780d3;
+    border-radius: 16px;
+    padding:5px 10px;
+    color: #fff;
+    margin: 10px;
+}
+.tag.highlight{
+    background-color: #225686;
+}
