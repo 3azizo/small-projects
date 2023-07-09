@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blob Marker</title>
+</head>
+<body class="center">
+    <div class="container">
+        <div class="marker--container center">
+            <div class="marker"></div>
+        </div>
+        <form id="form">
+            <div class="size flex-between">
+                <div >
+                    <label for="height">Height</label>
+                    <input type="number" name="height" id="height" value="300">
+                </div>
+                <div>
+                    <label for="width">width</label>
+                    <input type="number" name="width" id="width" value="300">
+                </div>                
+            </div>
+            <div>
+                <div class=" flex-between">
+                    <input type="range" name="topLeft" id="topLeft" value="50">
+                    <input type="range" name="topRigth" id="topRigth "value="90">
+                </div>
+                <div class="flex-between">
+                    <input type="range" name="bottomLeft" id="bottomLeft" value="70">
+                    <input type="range" name="bottomRigth" id="bottomRigth" value="40">
+                </div>
+            </div>
+        </form>
+        <div class="output flex-between">
+            <input type="text" class="generated-border"></input>
+            <button id="copy">Copy</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

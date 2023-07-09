@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --color:#44a2f0;
+    --color-2:#025eaa
+}
+body{
+    background: linear-gradient(var(--color),var(--color-2));
+    height: 100vh;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+.marker--container{
+    min-height: 400px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+.marker{
+    background: linear-gradient(var(--color),var(--color-2));
+    box-shadow: 15px 20px 30px rgba(0,0,0, 0.15);
+    border-radius:40% 60% 90% 40% / 60% 40% 70% 40%; 
+    width: 300px;
+    height: 300px;
+}
+#form .size{
+    margin: 20px;
+}
+label{
+    font-weight: bold;
+}
+input[type=number]{
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border: 1px solid var(--color);
+}
+
+input[type=range]{
+width: 45%;
+margin: 10px 5px;
+}
+.generated-border{
+    flex: 1;
+    margin-right: 25px;
+    height:40px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+button{
+    background-color: var(--color);
+    width: 70px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .container{
+    width: 80%;
+    }
+}
